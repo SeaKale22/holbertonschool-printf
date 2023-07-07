@@ -7,8 +7,10 @@
  */
 int _printf(const char *format, ...)
 {
-	va_list args;
+	va_list conversions;
 	int i;
+
+	va_start conversions;
 
 	for (i = 0; format[i] != '\0'; i++)
 	{
@@ -16,6 +18,8 @@ int _printf(const char *format, ...)
 		{
 			if (format[i + 1] != '%')
 			{
+				//find function for spec//
+				//do function for next additional arg//
 			}
 			else
 			{
