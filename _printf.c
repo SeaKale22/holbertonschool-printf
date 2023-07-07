@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdarg.h>
 /**
  * _printf- produces output according to format
  * @format: a character string containing 0 or more directives
@@ -9,8 +10,9 @@ int _printf(const char *format, ...)
 {
 	va_list conversions;
 	int i;
+	void (*spec_func)(char *str);
 
-	va_start conversions;
+	va_start(conversions, format);
 
 	for (i = 0; format[i] != '\0'; i++)
 	{
@@ -18,8 +20,8 @@ int _printf(const char *format, ...)
 		{
 			if (format[i + 1] != '%')
 			{
-				//find function for spec//
-				//do function for next additional arg//
+				spec_func = get_spec_func(format[i + 1]);
+				spec_func(va_arg(conversions, char *));
 			}
 			else
 			{
