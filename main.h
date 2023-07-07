@@ -6,6 +6,7 @@
 
 int _putchar(char c);
 int _printf(const char *format, ...);
+void (*get_spec_func (char a))(char *str);
 
 /**
  * struct format_spec - structure
