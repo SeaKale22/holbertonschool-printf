@@ -15,6 +15,7 @@ int _printf(const char *format, ...);
 typedef struct format_spec
 {
 	char *spec;
+	void (*f)(char *str);
 } forspec;
 
 #endif
