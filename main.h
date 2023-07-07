@@ -6,7 +6,13 @@
 int _putchar(char c);
 int _printf(const char *format, ...);
 
-typedef struct format_spec {
+/**
+ * struct format_spec - structure
+ * @spec: specifier
+ * Description: structure
+ */
+typedef struct format_spec
+{
 	char *spec;
 } forspec;
 
