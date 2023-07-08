@@ -12,6 +12,7 @@ int _printf(const char *format, ...)
 	int i;
 	int count = 0;
 	void (*spec_func)(char *str);
+	char *tempstr;
 
 	va_start(conversions, format);
 
@@ -29,7 +30,7 @@ int _printf(const char *format, ...)
 				else if (format[i + 1] == 's')
 				{
 					spec_func = get_spec_func(format[i + 1]);
-					char *tempstr = (va_arg(conversions, char *));
+					tempstr = (va_arg(conversions, char *));
 
 					spec_func(tempstr);
 					count += _strlen(tempstr);
