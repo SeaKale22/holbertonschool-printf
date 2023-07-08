@@ -31,9 +31,16 @@ int _printf(const char *format, ...)
 				{
 					spec_func = get_spec_func(format[i + 1]);
 					tempstr = (va_arg(conversions, char *));
-
-					spec_func(tempstr);
-					count += _strlen(tempstr);
+					if (tempstr == NULL)
+					{
+						print_str("(null)");
+						count += 6;
+					}
+					else
+					{
+						spec_func(tempstr);
+						count += _strlen(tempstr);
+					}
 				}
 			}
 			else
