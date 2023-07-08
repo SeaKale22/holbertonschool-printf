@@ -13,3 +13,4 @@ void print_str(char *s)
 		index++;
 	}
 }
+

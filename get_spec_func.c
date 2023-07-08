@@ -10,7 +10,6 @@ void (*get_spec_func(char a))(char *str)
 {
 	forspec specs[] = {
 		{"s", print_str},
-		{"c", print_char},
 		{NULL, NULL}
 	};
 	int i = 0;

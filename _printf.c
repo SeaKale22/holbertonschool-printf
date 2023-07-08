@@ -20,8 +20,15 @@ int _printf(const char *format, ...)
 		{
 			if (format[i + 1] != '%')
 			{
-				spec_func = get_spec_func(format[i + 1]);
-				spec_func(va_arg(conversions, char *));
+				if (format[i + 1] == 'c')
+				{
+					_putchar(va_arg(conversions, int));
+				}
+				else
+				{
+					spec_func = get_spec_func(format[i + 1]);
+					spec_func(va_arg(conversions, char *));
+				}
 			}
 			else
 			{

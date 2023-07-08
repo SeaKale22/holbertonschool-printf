@@ -4,6 +4,6 @@
  */
 int main(void)
 {
-	_printf("test%s\n","TEST");
+	_printf("test%c%s\n",'T', "west");
 	return (0);
 }
