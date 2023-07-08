@@ -10,6 +10,7 @@ int _printf(const char *format, ...)
 {
 	va_list conversions;
 	int i;
+	int count = 0;
 	void (*spec_func)(char *str);
 
 	va_start(conversions, format);
@@ -23,23 +24,30 @@ int _printf(const char *format, ...)
 				if (format[i + 1] == 'c')
 				{
 					_putchar(va_arg(conversions, int));
+					count++;
 				}
-				else
+				else if (format[i + 1] == 's')
 				{
 					spec_func = get_spec_func(format[i + 1]);
-					spec_func(va_arg(conversions, char *));
+					char *tempstr = (va_arg(conversions, char *));
+
+					spec_func(tempstr);
+					count += _strlen(tempstr);
 				}
 			}
 			else
 			{
 				_putchar('%');
+				count++;
 			}
 			i++;
 		}
 		else
 		{
 			_putchar(format[i]);
+			count++;
 		}
 
 	}
+	return (count);
 }
