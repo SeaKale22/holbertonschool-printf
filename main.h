@@ -9,6 +9,7 @@ int _printf(const char *format, ...);
 void (*get_spec_func (char a))(char *str);
 void print_str(char *s);
 void print_char(char *c);
+int char_comp(char c1, char c2);
 
 /**
  * struct format_spec - structure

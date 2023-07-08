@@ -17,7 +17,7 @@ void (*get_spec_func(char a))(char *str)
 
 	while (specs[i].spec != NULL)
 	{
-		if (_strcomp(specs[i].spec, a) == 0)
+		if (char_comp(specs[i].spec, a) == 0)
 		{
 			return (specs[i].f);
 		}
