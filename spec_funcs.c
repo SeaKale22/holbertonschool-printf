@@ -9,7 +9,7 @@ void print_str(char *s)
 
 	if (s == NULL)
 	{
-		s = (null);
+		s = "(null)";
 	}
 	while (s[index] != '\0')
 	{
