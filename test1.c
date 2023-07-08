@@ -4,6 +4,6 @@
  */
 int main(void)
 {
-	_printf("test%%test\n");
+	_printf("test%s\n","TEST");
 	return (0);
 }
