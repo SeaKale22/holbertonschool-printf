@@ -50,7 +50,8 @@ void print_int(int num)
 		}
 		int digit = num / divisor;
 
-		_putchar('0' + digt);
+		_putchar('0' + digit);
 		num %= divisor;
 		num_digits--;
+	}
 }

@@ -13,6 +13,7 @@ int _printf(const char *format, ...)
 	int count = 0;
 	void (*spec_func)(char *str);
 	char *tempstr;
+	int tempnum;
 
 	va_start(conversions, format);
 
@@ -27,6 +28,12 @@ int _printf(const char *format, ...)
 		{
 			if (format[i + 1] != '%')
 			{
+				if (format[i + 1] == 'd' || format[i + 1] == 'i')
+				{
+					spec_func = get_spec_func(format[i + 1]);
+					tempnum = (va_arg(conversions, int));
+					spec_func(tempnum);
+				}
 				if (format[i + 1] == 'c')
 				{
 					_putchar(va_arg(conversions, int));
