@@ -32,9 +32,15 @@ int _printf(const char *format, ...)
 					_putchar(va_arg(conversions, int));
 					count++;
 				}
-				else if (format[i + 1] == 's')
+				else if (format[i + 1] != 'c')
 				{
 					spec_func = get_spec_func(format[i + 1]);
+					if (spec_func == NULL)
+					{
+						_putchar('%');
+						count++;
+						continue;
+					}
 					tempstr = (va_arg(conversions, char *));
 					if (tempstr == NULL)
 					{
