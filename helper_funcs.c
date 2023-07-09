@@ -32,3 +32,14 @@ int _strlen(char *s)
 	}
 	return (length);
 }
+
+/**
+ * find_int_length - finds length of int
+ * @num: int
+ * Return: int
+ */
+
+int find_int_length(int num)
+{
+
+}

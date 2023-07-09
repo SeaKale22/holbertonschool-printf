@@ -10,6 +10,8 @@ void (*get_spec_func(char a))(char *str);
 void print_str(char *s);
 int char_comp(char *c1, char c2);
 int _strlen(char *s);
+void print_int(int);
+int find_int_length(int);
 
 /**
  * struct format_spec - structure
