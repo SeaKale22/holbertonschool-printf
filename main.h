@@ -27,6 +27,13 @@ typedef struct format_spec
 	void (*f)(char *str);
 } forspec;
 
+/**
+ * struct format_spec_int - structure
+ * @spec: specifier
+ * @f: input 
+ * @n: int
+ * Description: structure
+ */
 typedef struct format_spec_int
 {
 	char *spec;
