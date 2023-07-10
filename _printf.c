@@ -12,6 +12,7 @@ int _printf(const char *format, ...)
 	int i;
 	int count = 0;
 	void (*spec_func)(char *str);
+	void (*spec_func_int)(int n);
 	char *tempstr;
 	int tempnum;
 
@@ -30,9 +31,11 @@ int _printf(const char *format, ...)
 			{
 				if (format[i + 1] == 'd' || format[i + 1] == 'i')
 				{
-					spec_func = get_spec_func(format[i + 1]);
+					spec_func_int = get_spec_func_int(format[i + 1]);
 					tempnum = (va_arg(conversions, int));
-					spec_func(tempnum);
+					spec_func_int(tempnum);
+					i++;
+					continue;
 				}
 				if (format[i + 1] == 'c')
 				{

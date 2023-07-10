@@ -7,6 +7,7 @@
 int _putchar(char c);
 int _printf(const char *format, ...);
 void (*get_spec_func(char a))(char *str);
+void (*get_spec_func_int(char a))(int n);
 void print_str(char *s);
 int char_comp(char *c1, char c2);
 int _strlen(char *s);
@@ -25,5 +26,11 @@ typedef struct format_spec
 	char *spec;
 	void (*f)(char *str);
 } forspec;
+
+typedef struct format_spec_int
+{
+	char *spec;
+	void (*f)(int n);
+} forspec_int;
 
 #endif
