@@ -28,6 +28,8 @@ void print_int(int num)
 		num = -num;
 	}
 	if (num / 10)
+	{
 		print_int(num / 10);
-	_putchar(num % 10 + '0';
+	}
+	_putchar(num % 10 + '0');
 }
