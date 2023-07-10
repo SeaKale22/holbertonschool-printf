@@ -16,8 +16,12 @@ To use _printf() you must input one of the following key characters after the % 
 %d: Prints integers of max/min size of int
 .RS 0
 %i: Prints integers of max/min size of int
+.SH EXAMPLE
+#include "main.h"
+	 _printf("hello, %s", "people")
+	 output: hello, people
 .SH RETURN VALUES
-The _printf() function returns an integer representing the number of characters printed not counting \\0 for the string.
+The _printf() function returns an integer representing the number of characters printed not counting null for the string.
 .SH SEE ALSO
 .I printf(3)
 .SH BUGS
