@@ -22,6 +22,13 @@ void print_str(char *s)
  */
 void print_int(int num)
 {
+	if (num == INT_MIN)
+	{
+		_putchar('-');
+		_putchar('2');
+		num %= 1000000000;
+		num = -num;
+	}
 	if (num < 0)
 	{
 		_putchar('-');
