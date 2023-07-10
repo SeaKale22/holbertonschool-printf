@@ -1,0 +1,26 @@
+.TH man 3 "11 July 2023" "0.01" "_printf man page"
+.SH NAME
+.B _printf
+- Our recreation of the printf function
+.SH SYNOPSIS
+The "main.h" is necessary to use this function
+.SH DESCRIPTION
+The _printf() function prints to the standard output according to the format specified in the arguments. Conversion specifiers can be used to specify what is printed and how, using the additional arguments if there are any.
+.SH USAGE
+To use _printf() you must input one of the following key characters after the % symbol.
+.RS 3
+%c: Prints characters
+.RS 0
+%s: Prints strings
+.RS 0
+%d: Prints integers of max/min size of int
+.RS 0
+%i: Prints integers of max/min size of int
+.SH RETURN VALUES
+The _printf() function returns an integer representing the number of characters printed not counting \\0 for the string.
+.SH SEE ALSO
+.I printf(3)
+.SH BUGS
+No known bugs.
+.SH AUTHOR
+Matt Krozel & Kaleb Kuykendall
