@@ -14,7 +14,7 @@ Valid conversion specifiers are:
 + %d - %d is used to specify a decimal (base 10) number
 + %i - %i is used to specify an integer in base 10
 
-## Useage
+## Usage
 In order to properly use, all .c files must be compiled together. Here is a suggested compile method:
 
 + $ gcc -Wall -Werror -Wextra -pedantic -std=gnu89 -Wno-format *.c
