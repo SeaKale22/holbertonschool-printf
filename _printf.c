@@ -35,6 +35,7 @@ int _printf(const char *format, ...)
 					tempnum = (va_arg(conversions, int));
 					spec_func_int(tempnum);
 					i++;
+					count += find_int_length(tempnum);
 					continue;
 				}
 				if (format[i + 1] == 'c')
