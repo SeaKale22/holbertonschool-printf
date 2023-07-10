@@ -5,8 +5,8 @@
 The intention of this project was to learn how to work in groups and to create a function similar to the printf function from the standard library.
 
 ##_printf
-Our function prints to the standard output according the the format specified in the arguments.
-Conversion specifiers can be used to what is printed and how, using the additional argumants if there are any.
+Our function prints to the standard output according to the format specified in the arguments.
+Conversion specifiers can be used to specify what is printed and how, using the additional arguments if there are any.
 Valid conversion specifiers are:
 
 + %c - %c can be used to specify a character to print
@@ -15,7 +15,7 @@ Valid conversion specifiers are:
 + %i - %i is used to specify an interger in base 10
 
 ##Useage
-In order to properly use, all .c files must be complied together. Here is a suggestion compile method:
+In order to properly use, all .c files must be compiled together. Here is a suggested compiling method:
 
 + $ gcc -Wall -Werror -Wextra -pedantic -std=gnu89 -Wno-format *.c
 
