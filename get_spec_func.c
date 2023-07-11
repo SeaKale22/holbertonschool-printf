@@ -3,7 +3,7 @@
 /**
  * get_spec_func - takes a character and returns a pointer that returns void
  * @a: character
- * Return: function pointer or void if no match
+ * Return: function pointer or null if no match
  */
 
 void (*get_spec_func(char a))(char *str)
@@ -25,9 +25,9 @@ void (*get_spec_func(char a))(char *str)
 	return (NULL);
 }
 /**
- * get_spec_func - takes a character and returns a function
+ * get_spec_func_int - takes a int and returns a pointer
  * @a: character
- * Return: function pointer or void if no match
+ * Return: function pointer or null if no match
  */
 
 void (*get_spec_func_int(char a))(int n)

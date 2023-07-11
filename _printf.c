@@ -1,5 +1,4 @@
 #include "main.h"
-#include <stdarg.h>
 /**
  * _printf- produces output according to format
  * @format: a character string containing 0 or more directives
